@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title> Budget tracker</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="witdth=device-width" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-200 device-width">
+
+<div class="flex flex-col justify-center items-center m-2 sm:m-4 md:m-6">
+   <div class="md:border-2 bg-purple-200 shadow-lg rounded-lg p-3 sm:p-4md:p-6">
+    <div>
+    <h1 class="text-center text-4xl font-serif font-bold"> phinX</h1>
+    <h2 class="text-center text-4xl font-serif font-bold">BUDGET TRACKER</h2>
+    <h2 class="text-center text-4xl font-serif font-bold">APP</h2>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center m-6">
+
+       <div class="bg-white p-6 rounded-lg border-2 m-2 px-10">
+        <label for="inputItem" class="p-4 font-bold"> ITEM: </label>  
+       <input id="inputItem" type="text" placeholder="   Add an item" class="border-1 py-2" required/>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-2 m-2">
+        <label for="inputAmt" class="p-4 font-bold"> AMOUNT: </label>
+        <input id="inputAmt" type="number" class="border-1 py-2" required/>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-2 m-2 px-14 md:py-6">
+        <label for="category" class="p-4 font-bold">CATEGORY: </label>
+        <select id=inputCategory class="border-2 p-2" required>
+            <option value="Income">Income</option>
+            <option value="Expenses">Expenses</option>
+        </select>
+        </div>
+
+         <div class="bg-white p-6 rounded-lg border-2 m-2 px-18">
+        <label for="inputItem" class="p-4 font-bold">DATE: </label>
+         <input id="inputDate" type="date" class="border-1 py-2" required/>
+         </div>
+
+        <label for="button" class="p-4 font-bold"></label>
+        <button id="addBtn" class="border p-2 w-64 md:w-auto mb-2 md:px-5 hover:bg-purple-600">Add</button>
+        </div>
+
+    <div class="flex flex-col justify-center items-center m-6 w-full overflow-x-auto" >
+        <h2 class="font-bold"><i>My Budget List</i></h2>
+    
+            <table class="border-1 table-fixed">
+                <thead>
+        <tr class="w-full border-1 p-4 m-4">
+            <th class="border text-sm md:text-base p-2 px-4 md:px-15 m-4">ITEM</th>
+            <th class="border text-sm md:text-base p-2 px-4 md:px-15 m-4">AMOUNT</th>
+            <th class="border text-sm md:text-base p-2 px-4 md:px-15 m-4">CATEGORY</th>
+            <th class="border text-sm md:text-base p-2 px-4 md:px-15 m-4">DATE</th>
+            <th class="border text-sm md:text-base p-2 px-4 md:px-15 m-4">DELETE</th>
+            </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+
+            </tbody>
+
+
+            <tfoot>
+            <tr>
+                <td class="border-1 p-2 m-4">Total</td>
+                <td id="totalAmt" class="border-1 p-2 m-4"></td>
+                <td class="border-1 p-2 m-4"></td>
+                <td class="border-1 p-2 m-4"></td>
+                <td class="border-1 p-2 m-4"></td>
+            </tr>
+            </tfoot>
+            </table>
+         </div>   
+    </div>
+</div>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
